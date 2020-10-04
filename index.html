@@ -9,60 +9,65 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <header class="header">
-            <h1>Mockup Home Page</h1>
-            <h3>You're home. Take off your coat and stay awhile.</h3>
-            <br>
-            <hr>
-            <hr>
-            <br>
-        </header>
-        <div class="main-wrapper">
-            <div class="main">
-                <br>
-                <img src="https://placehold.it/200" title="square-photo" alt="placeholder" id="square">
-                <img src="https://placehold.it/200" title="square-photo" alt="placeholder" id="square">
-                <img src="https://placehold.it/200" title="square-photo" alt="placeholder" id="square">
-                <br>
-                <button type="button"><a href="continue-reading.html">Continue Reading</a></button>
-                <br>
-
-                <img src="https://placehold.it/150" title="banner-with-quote" id="banner">
-
-                <!-- <article class="post">
-
-                    <figure class="post-thumb">
-                        <img src="https://placehold.it/100" title="mock-thumbnail" alt="">
-                    </figure>
-
-                    <div class="post-content">
-
-                        <header class="post-header">
-
-                            <h5 class="post-title">
-                                <a href=""></a>
-                            </h5>
-                            <p>*Use "Doctor Who" Ipsum for all p Lorem Ipsum*</p>
-                        </header>
-
-                    </div>
-                </article> -->
+    <div class="grid-container">
+        <!-- It's clear to me I don't know how to use either Grid or Flex, let alone combining them. I keep mixing up the syntax.-->
+        <div class="item header">
+            <div id="headwrap">
+                <h2>Welcome Home!</h2>
+                <h4>Take off your coat and stay awhile.</h4>
             </div>
         </div>
-        <footer class="footer">
-            <form>
-                <br>
-                <p><input type="text" placeholder="Name"></p>
-                <p><input type="text" placeholder="Email"></p>
-                <p><textarea rows="4" cols="50" placeholder="Message"></textarea></p>
-                <button type="button">Submit</button>
-                <!-- That button! It does nothing! -->
-                <br>
-            </form>
-        </footer>
-    </div>
+        <div class="item mezzanine">
+            <br>
+            <img src=./PHOTOS/cloudy.png title="square-photo" alt="cloudy day" id="square">
+            <img src=./PHOTOS/cloudy.png title="square-photo" alt="cloudy day" id="square">
+            <img src=./PHOTOS/cloudy.png title="square-photo" alt="cloudy day" id="square">
+            <button type="button"><a href="continue-reading.html">Continue Reading</a></button>
+        </div>
+        <div class="item sidebar"></div>
+        <!--These seem to work in the mobile device simulator, but I don't know why. -->
+        <div class="item sidebar-2"></div>
+        <div class="item blog-1">
+            <img src=./PHOTOS/cloudy.png title="square-photo" alt="cloudy day" id="square">
+            <p>You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to
+                make you feel better? It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! They're
+                not aliens, they're Earth…liens! You know how I sometimes have really brilliant ideas? The way I see it,
+                every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad
+                things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.
+                It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! No, I'll fix it. I'm good at
+                fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. Aw, you're all Mr.
+                Grumpy Face today. I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel
+                like jumping out of a spaceship. Stop talking, brain thinking. Hush. Sorry, checking all the water in
+                this area; there's an escaped fish.
+            </p>
+        </div>
+        <div class="item blog-2">
+            <p>You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to
+                make you feel better? It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! They're
+                not aliens, they're Earth…liens! You know how I sometimes have really brilliant ideas? The way I see it,
+                every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad
+                things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.
+                It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! No, I'll fix it. I'm good at
+                fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. Aw, you're all Mr.
+                Grumpy Face today. I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel
+                like jumping out of a spaceship. Stop talking, brain thinking. Hush. Sorry, checking all the water in
+                this area; there's an escaped fish.
+            </p>
+        </div>
+        <div class="item footer">
+            <div class="form-wrapper">
+                <form>
+                    <p>Questions or comments? Get in touch!</p>
+                    <p><input type="text" placeholder="Name"></p>
+                    <p><input type="text" placeholder="Email"></p>
+                    <p><textarea rows="3" cols="50" placeholder="Message"></textarea></p>
+                    <button type="button"><a href="https://youtu.be/T-8BoWU3XMo">Submit</a></button>
+                    <!-- The Submit button! It does nothing! Or does it? Rock out!-->
+                    <!-- Well, I managed to make *something* work.-->
+                </form>
+            </div>
+        </div>
+    </div> <!-- Would a footer go inside the container or outside?-->
 </body>
 
 </html>

@@ -1,17 +1,63 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Learn More</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link href="./CSS/style.css" rel="stylesheet" type="text/css"> <!-- Links to CSS file in CSS folder -->
-  </head>
-  <body>
-    <div class="container">
-      <section id="header"></section>
-      <section id="features"></section>
-      <section id="main"></section>
-      <section id="footer"></section>
+
+<head>
+  <title>Learn More</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link href="./CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <!-- It's clear to me I don't know how to use either Grid or Flex, let alone combining them. I keep mixing up the syntax.-->
+    <div class="item header">
+      <div id="headwrap">
+        <h2>Learn More Here<a href="index.html"></a></h2>
+        <!-- There seemed to be little consensus about how to prooperly nest this link.-->
+        <h4>All knowledge there is to learn, the internet has replaced with cat videos.</h4>
+        <button type="button"><a href="blog-post.html">Blog Post</a></button>
+      </div>
     </div>
-  </body>
+    <div class="item sidebar"></div>
+    <div class="item sidebar-2"></div>
+    <div class="item blog-1">
+      <img src=./PHOTOS/cloudy.png title="square-photo" alt="cloudy day" id="square">
+      <p>You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make
+        you feel better? It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! They're not aliens,
+        they're Earth…liens! You know how I sometimes have really brilliant ideas? The way I see it, every life is a
+        pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the
+        bad things don't necessarily spoil the good things and make them unimportant. It's art! A statement on modern
+        society, 'Oh Ain't Modern Society Awful?'! No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No,
+        I'm the Doctor. Don't call me the Rotmeister. Aw, you're all Mr. Grumpy Face today. I'm nobody's taxi service;
+        I'm not gonna be there to catch you every time you feel like jumping out of a spaceship. Stop talking, brain
+        thinking. Hush. Sorry, checking all the water in this area; there's an escaped fish.</p>
+    </div> <!-- I'm glad I didn't pick the Samuel L Jackson ipsum. It didn't seem safe-for-work. -->
+    <div class="item blog-2">
+      <p>You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make
+        you feel better? It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! They're not aliens,
+        they're Earth…liens! You know how I sometimes have really brilliant ideas? The way I see it, every life is a
+        pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the
+        bad things don't necessarily spoil the good things and make them unimportant. It's art! A statement on modern
+        society, 'Oh Ain't Modern Society Awful?'! No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No,
+        I'm the Doctor. Don't call me the Rotmeister. Aw, you're all Mr. Grumpy Face today. I'm nobody's taxi service;
+        I'm not gonna be there to catch you every time you feel like jumping out of a spaceship. Stop talking, brain
+        thinking. Hush. Sorry, checking all the water in this area; there's an escaped fish.</p>
+    </div>
+    <div class="item footer">
+      <div class="form-wrapper">
+        <form>
+          <p>Questions or comments? Get in touch!</p>
+          <p><input type="text" placeholder="Name"></p>
+          <p><input type="text" placeholder="Email"></p>
+          <p><textarea rows="3" cols="50" placeholder="Message"></textarea></p>
+          <button type="button"><a href="https://youtu.be/T-8BoWU3XMo">Submit</a></button>
+          <!-- The Submit button! It does nothing! Or does it? Rock out!-->
+          <!-- Well, I managed to make *something* work.-->
+        </form>
+      </div>
+    </div>
+  </div> <!-- Would a footer go inside the container or outside?-->
+</body>
+
 </html>
