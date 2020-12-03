@@ -1,137 +1,330 @@
-.grid-container {
-  display: grid;
-  width: 100vw;
-  height: auto;
-  grid-template-columns: 1fr 2.1fr 1fr 1.1fr; /* Bob was right. It's maddening to keep playing around with incremental fractions. */
-  grid-template-rows: .65fr .7fr 1.6fr 0.8fr;
-  gap: .020rem;
-  grid-template-areas:
-    "header  header  header  header"
-    "mezzanine mezzanine mezzanine mezzanine"
-    "sidebar blog-1 blog-2 sidebar-2"
-    "footer footer footer footer";
-}
-
-/* Hardly any of this CSS works right, and it's got me twisted in knots. */
-  
-.header {
-  grid-area: header;
-}
-
-.mezzanine {
-  grid-area: mezzanine;
-}
-  
-.sidebar {
-  grid-area: sidebar;
-}
-  
-.sidebar-2 {
-  grid-area: sidebar-2;
-}
-  
-.blog-1 {
-  grid-area: blog-1;
-}
-  
-.blog-2 {
-  grid-area: blog-2;
-}
-  
-.footer {
-  grid-area: footer;
-}
-/* Maybe on my next attempt at this project, I should pick either Grid or Flex, and stick with the choice. */
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+/* ------ Global page styles ------ */
 
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
-.blog-1 #sqaure {
-  float: left;
-  width: 5vw;
-  height: 5vw;
-  padding: 2.5px;
+/* ------ Got the idea from our capstone project to use Oswald and Rubik as fonts ------ */
+
+h2, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
 }
 
-.header > a {
-  cursor: pointer;
-}
-  
-.item {
-  display: flex;
-  justify-content: center;
-  
+a {
+  text-decoration: none;
+  color: black
 }
 
-.mezzanine button {
-  align-items: normal;
+a:hover {
+  color: cadetblue;
 }
 
-button {
-  background-color: orangered; /* Apparently I can build a working button, but the only good page full of buttons is BWAMP. */
-  padding: 10px;
+.button {
+  background-color: rgb(252, 109, 58);
+  padding: .3rem;
   text-align: center;
   text-decoration: none;
-  font-size: 12px;
-  font-family: Verdana,Tahoma, sans-serif;
-  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  font-size: .5rem;
+  margin: .8rem 0rem;
+  width: fit-content;
 }
-  
-button:hover { 
+
+.button:hover {
   transition-duration: 0.5s;
   background-color: goldenrod;
 }
 
-p .footer {
-  text-align: center;
-}
-  
-input:active {
-  background-color: honeydew;
-}
-  
-textarea:active {
-  background-color: honeydew;
-}
-  
-form button {
-  align-items: normal;
-  text-decoration: none;
+/* ------ Header styles ------ */
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  margin: 1rem 0;
+}
+
+.header-line {
+  border: 1px solid black;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* ------ Mezzanine styles ------ */
+
+/* ------ Mezzanine is unique to the homepage ------ */
+
+.mezzanine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.mezzanine #square {
+.bob-wrapper {
   display: flex;
-  justify-items: center;
-  align-content: space-between; 
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
 }
-  
-.sidebar {
-  display: flex;
-}
-  
-.sidebar-2 {
-  display: flex;
-}
-  
-.blog-1 {
+
+.kitty-wrapper {
   display: flex;
 }
 
-.blog-2 {
-  display: flex;
+.fluffy {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: .6rem;
+  font-weight: bold;
 }
 
-form {
-  justify-self: start;
+/* ------ Quote block styles ------ */
+
+/* ------ Quote Block is unique to the homepage ------ */
+
+#quote-block {
+  background-color: slategray;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0
+}
+
+#quote-block>p {
+  color: whitesmoke;
+  font-family: 'Rubik', sans-serif;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+/* ------ Center of page styles ------ */
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.left-column {
+  width: 40.7vw;
+  margin-right: .8rem;
+}
+
+.blogPost-column {
+  width: 60vw;
+}
+
+.center-post {
+  width: 100%;
+}
+
+.center-post-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+}
+
+.center-post-pic {
+  width: 100%;
+}
+
+.center-post-img {
+  width: 100%;
+}
+
+.center-post-subtitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: .9rem;
+}
+
+.center-line {
+  border: 2px solid black;
+  margin: .5rem 0;
+}
+
+.right-column {
+  width: 18.7vw;
+  height: 100%;
+  margin-right: .8rem;
+}
+
+.upper-right-box {
+  height: 45%;
+}
+
+.dateTag {
+  width: fit-content;
+  padding: 0.5em .5em 0.5em .5em;
+  font-family: 'Rubik', sans-serif;
+  font-size: .4em;
+  background-color: burlywood;
+}
+
+.smallTitle {
+  font-family: 'Rubik', sans-serif;
+  font-size: .7em;
+  margin: .5em 0 .5em 0;
+}
+
+.smallPostText {
+  font-size: .6em;
+}
+
+.lower-right-box {
+  height: 45%;
+}
+
+.something-note {
+  margin-bottom: .6rem
+}
+
+.postage-cat {
+  margin-right: .5rem;
+  float: left;
+}
+
+/* ------ Footer styles ------ */
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightgrey;
+  margin-top: 1rem;
 }
 
 .footer {
+  width: 62vw;
   display: flex;
-  background-color: wheat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.questComment {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* ------ Wrapper within footer for contact portions ------ */
+
+.contact {
+  width: 62.5vw;
+  margin-top: 15px;
+  display: flex;
+}
+
+.leftSide, .rightSide {
+  width: 34.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameEmail {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: .5rem
+}
+
+.name, .email {
+  font-family: 'Rubik', sans-serif;
+  width: 46%;
+  border: 1px solid black;
+  background-color: lightgrey;
+}
+
+.textArea {
+  font-family: 'Rubik', sans-serif;
+  resize: none;
+  border: 1px solid black;
+  background-color: lightgray;
+}
+
+/* ------ The use of focus was a tough nut to crack ------ */
+
+.name:focus, .email:focus {
+  background-color: white;
+  outline: none !important;
+  border: 2px solid orangered;
+}
+
+.textArea:focus {
+  background-color: white;
+  outline: none !important;
+  border: 2px solid orangered;
+}
+
+.lorem-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin-bottom: 30px;
+}
+
+/* ------ Wrapping the social media stuff within the contact wrapper outside it ------ */
+
+.social-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  width: 95%;
+}
+
+.personal-info, .social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+/* ------ Josh Downs assisted with the use of :nth-child ------ */
+
+.foot:nth-child(odd) {
+  justify-self: flex-start;
+}
+
+.foot:nth-child(even) {
+  justify-self: flex-end;
+}
+
+.round {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 15px;
+}
+
+.reach {
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  text-align: justify;
+  width: 80%;
+  margin-top: 3px;
+  padding-bottom: 20px;
 }
